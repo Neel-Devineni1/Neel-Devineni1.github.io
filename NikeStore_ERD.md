@@ -15,7 +15,7 @@ CUSTOMER ||--o{ SALE : places
     string lastName
     string phone_num PK
    }
-SALE ||--|{ PRODUCT : contains
+SALE }|--|{ PRODUCT : contains
 SALE ||--o{INVENTORY : changes
    SALE{
     string SALEnum
@@ -34,7 +34,19 @@ INVENTORY ||--|{ PRODUCT : contains
 
 |Entity     |Description     |
 | --- | --- |
-|PRODUCT     |     |
-|CUSTOMER| |
-|SALE| |
-|INVENTORY| |
+|PRODUCT   | The product being sold to the customer    |
+|CUSTOMER| The customer that buys the products  |
+|SALE| The transaction bewteen the business and the customer, the exchange of the products for money|
+|INVENTORY| What the business has stored |
+
+
+|Relationship     |Description     | Significance | 
+| --- | --- | --- |
+|PRODUCT <=> SALE     | The      | |
+|PRODUCT <=> INVENTORY     |     | |
+|CUSTOMER <=> SALE| |  |
+|SALE <=> INVENTORY| |  |    
+
+
+
+
