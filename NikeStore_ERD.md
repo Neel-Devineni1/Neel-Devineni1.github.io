@@ -16,7 +16,7 @@ CUSTOMER ||--o{ SALE : orders
     string phone_num PK
    }
 SALE }|--|{ PRODUCT : contains
-SALE ||--o{INVENTORY : indirectly changes
+SALE ||--o{INVENTORY : "indirectly changes"
    SALE{
     string SALEnum
     float percentOFF
